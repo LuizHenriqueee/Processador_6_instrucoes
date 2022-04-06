@@ -46,20 +46,20 @@ process (clk) begin -- registrador de estados
 			when inicio => nextstate <= busca;
 			when busca => nextstate <= decodifica;
 			when decodifica => case op is
-									when "0000" => nextstate <= carrega;
-									when "0001" => nextstate <= armazena;
-									when "0010" => nextstate <= soma;
-									when "0011" => nextstate <= constante;
-									when "0100" => nextstate <= subtrair;
-									when "0101" => nextstate <= saltar_se;
-									when others => nextstate <= inicio; -- caso não esperado
-								end case;
+						when "0000" => nextstate <= carrega;
+						when "0001" => nextstate <= armazena;
+						when "0010" => nextstate <= soma;
+						when "0011" => nextstate <= constante;
+						when "0100" => nextstate <= subtrair;
+						when "0101" => nextstate <= saltar_se;
+						when others => nextstate <= inicio; -- caso não esperado
+					   end case;
 		
 			when saltar_se => case RF_Rp_zero is
-								when '1' => nextstate <= saltar;
-								when '0' => nextstate <= busca;
-								when others => nextstate <= inicio; -- caso não esperado
-							  end case;
+						when '1' => nextstate <= saltar;
+						when '0' => nextstate <= busca;
+						when others => nextstate <= inicio; -- caso não esperado
+					  end case;
 	
 			when carrega => nextstate <= busca;
 			when armazena => nextstate <= busca;
