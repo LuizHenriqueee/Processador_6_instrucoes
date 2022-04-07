@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.runs/synth_1/processador_6_instrucoes.tcl"
+  variable script "C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.runs/synth_1/topUnidadeControle.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a12ticsg325-1L
 
@@ -86,21 +87,12 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_mem {{C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/imports/Projeto Final/Unidade_de_controle/Unidade_de_controle.srcs/sources_1/imports/MemoryI/hexFile.mem}}
 read_vhdl -library xil_defaultlib {
-  C:/Users/User/Documents/GitHub/Processador_6_instrucoes/ALU.vhd
   {C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/imports/Projeto Final/Unidade_de_controle/Unidade_de_controle.srcs/sources_1/imports/IR/InstructionRegister.vhd}
-  C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MUX3x1.vhd
-  C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd
   C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd
-  {C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/imports/Projeto Final/Bloco_Operacional/Bloco_Operacional.srcs/sources_1/new/bloco_operacional.vhd}
-  C:/Users/User/Documents/GitHub/Processador_6_instrucoes/flag0.vhd
-  C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MemoryD/memD.vhd
-  C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MemoryI/memI.vhd
   C:/Users/User/Documents/GitHub/Processador_6_instrucoes/ProgramCounter/PC/pc.vhd
   C:/Users/User/Documents/GitHub/Processador_6_instrucoes/somador.vhd
-  C:/Users/User/Documents/GitHub/Processador_6_instrucoes/teste_bloco_de_controle/top_level_controle.vhd
-  C:/Users/User/Documents/GitHub/Processador_6_instrucoes/teste_bloco_operacional/top_level_operacional.vhd
   C:/Users/User/Documents/GitHub/Processador_6_instrucoes/unidade_de_controle.vhd
-  C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/processador_6_instrucoes.vhd
+  C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/topUnidadeControle.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -115,7 +107,7 @@ set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top processador_6_instrucoes -part xc7a12ticsg325-1L
+synth_design -top topUnidadeControle -part xc7a12ticsg325-1L
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -125,10 +117,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef processador_6_instrucoes.dcp
+write_checkpoint -force -noxdef topUnidadeControle.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file processador_6_instrucoes_utilization_synth.rpt -pb processador_6_instrucoes_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file topUnidadeControle_utilization_synth.rpt -pb topUnidadeControle_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

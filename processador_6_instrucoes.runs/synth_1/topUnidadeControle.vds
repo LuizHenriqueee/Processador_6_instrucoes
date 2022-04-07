@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Apr  7 17:00:56 2022
+# Process ID: 16116
+# Current directory: C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.runs/synth_1
+# Command line: vivado.exe -log topUnidadeControle.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source topUnidadeControle.tcl
+# Log file: C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.runs/synth_1/topUnidadeControle.vds
+# Journal file: C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source topUnidadeControle.tcl -notrace
+Command: synth_design -top topUnidadeControle -part xc7a12ticsg325-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17552
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1155.223 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'topUnidadeControle' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/topUnidadeControle.vhd:40]
+INFO: [Synth 8-3491] module 'unidade_de_controle' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/unidade_de_controle.vhd:5' bound to instance 'control_unit' of component 'unidade_de_controle' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/topUnidadeControle.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'unidade_de_controle' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/unidade_de_controle.vhd:16]
+INFO: [Synth 8-3491] module 'bloco_controle' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:4' bound to instance 'U0' of component 'bloco_controle' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/unidade_de_controle.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'bloco_controle' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:17]
+INFO: [Synth 8-226] default block is never used [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:58]
+WARNING: [Synth 8-614] signal 'RF_Rp_zero' is read in the process but is not in the sensitivity list [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:44]
+WARNING: [Synth 8-614] signal 'd' is read in the process but is not in the sensitivity list [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:75]
+WARNING: [Synth 8-614] signal 'ra' is read in the process but is not in the sensitivity list [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:75]
+WARNING: [Synth 8-614] signal 'rb' is read in the process but is not in the sensitivity list [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:75]
+WARNING: [Synth 8-614] signal 'rc' is read in the process but is not in the sensitivity list [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'bloco_controle' (1#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:17]
+INFO: [Synth 8-3491] module 'programCounter' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/ProgramCounter/PC/pc.vhd:34' bound to instance 'U1' of component 'programCounter' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/unidade_de_controle.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'programCounter' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/ProgramCounter/PC/pc.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'programCounter' (2#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/ProgramCounter/PC/pc.vhd:43]
+INFO: [Synth 8-3491] module 'InstructionRegister' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/imports/Projeto Final/Unidade_de_controle/Unidade_de_controle.srcs/sources_1/imports/IR/InstructionRegister.vhd:34' bound to instance 'U2' of component 'InstructionRegister' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/unidade_de_controle.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'InstructionRegister' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/imports/Projeto Final/Unidade_de_controle/Unidade_de_controle.srcs/sources_1/imports/IR/InstructionRegister.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'InstructionRegister' (3#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/imports/Projeto Final/Unidade_de_controle/Unidade_de_controle.srcs/sources_1/imports/IR/InstructionRegister.vhd:41]
+INFO: [Synth 8-3491] module 'somador' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/somador.vhd:5' bound to instance 'U3' of component 'somador' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/unidade_de_controle.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'somador' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/somador.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'somador' (4#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/somador.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'unidade_de_controle' (5#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/unidade_de_controle.vhd:16]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/topUnidadeControle.vhd:81]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/topUnidadeControle.vhd:90]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/topUnidadeControle.vhd:92]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/topUnidadeControle.vhd:94]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/topUnidadeControle.vhd:96]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: wait statement with no conditon [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/topUnidadeControle.vhd:98]
+ERROR: [Synth 8-690] width mismatch in assignment; target has 16 bits, source has 15 bits [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/topUnidadeControle.vhd:99]
+ERROR: [Synth 8-285] failed synthesizing module 'topUnidadeControle' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/topUnidadeControle.vhd:40]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1155.223 ; gain = 0.000
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 11 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  7 17:01:06 2022...

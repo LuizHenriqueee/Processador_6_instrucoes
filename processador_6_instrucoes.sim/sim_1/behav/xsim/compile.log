@@ -1,2 +1,4 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Luiz/Desktop/Projeto de circuitos integrados digitais/Projeto Final/processador_6_instrucoes/processador_6_instrucoes.srcs/sim_1/new/tb_processador_6_instrucoes.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_processador_6_instrucoes'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MemoryI/memI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memoryI'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/User/Documents/GitHub/Processador_6_instrucoes/teste_bloco_de_controle/top_level_controle.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top_level_controle'

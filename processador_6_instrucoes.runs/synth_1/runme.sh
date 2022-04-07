@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log processador_6_instrucoes.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source processador_6_instrucoes.tcl
+EAStep vivado -log topUnidadeControle.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source topUnidadeControle.tcl

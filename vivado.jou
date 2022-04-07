@@ -10,3 +10,56 @@
 # Journal file: C:/Users/User/Documents/GitHub/Processador_6_instrucoes\vivado.jou
 #-----------------------------------------------------------
 start_gui
+open_project -part xc7a12ticsg325-1L C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.xpr
+update_compile_order -fileset sources_1
+update_files -from_files C:/Users/User/Documents/GitHub/Processador_6_instrucoes/ALU.vhd -to_files C:/Users/User/Documents/GitHub/Bloco_Operacional/Bloco_Operacional.srcs/sources_1/new/ALU.vhd -filesets [get_filesets *]
+update_files -from_files C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MUX3x1.vhd -to_files C:/Users/User/Documents/GitHub/Bloco_Operacional/Bloco_Operacional.srcs/sources_1/new/MUX3x1.vhd -filesets [get_filesets *]
+update_files -from_files C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd -to_files C:/Users/User/Documents/GitHub/Bloco_Operacional/Bloco_Operacional.srcs/sources_1/imports/RegisterFile/RegisterFile.vhd -filesets [get_filesets *]
+update_files -from_files C:/Users/User/Documents/GitHub/Processador_6_instrucoes/flag0.vhd -to_files C:/Users/User/Documents/GitHub/Bloco_Operacional/Bloco_Operacional.srcs/sources_1/new/flag0.vhd -filesets [get_filesets *]
+update_files -from_files C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MemoryD/memD.vhd -to_files C:/Users/User/Documents/GitHub/Bloco_Operacional/Bloco_Operacional.srcs/sources_1/new/memD.vhd -filesets [get_filesets *]
+update_files -from_files C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MemoryI/memI.vhd -to_files C:/Users/User/Documents/GitHub/Unidade_de_controle/Unidade_de_controle.srcs/sources_1/imports/processador_6_instrucoes/MemoryI/memI.vhd -filesets [get_filesets *]
+update_files -from_files C:/Users/User/Documents/GitHub/Processador_6_instrucoes/ProgramCounter/PC/pc.vhd -to_files C:/Users/User/Documents/GitHub/Unidade_de_controle/Unidade_de_controle.srcs/sources_1/imports/processador_6_instrucoes/ProgramCounter/PC/pc.vhd -filesets [get_filesets *]
+update_files -from_files C:/Users/User/Documents/GitHub/Processador_6_instrucoes/somador.vhd -to_files C:/Users/User/Documents/GitHub/Unidade_de_controle/Unidade_de_controle.srcs/sources_1/imports/processador_6_instrucoes/somador.vhd -filesets [get_filesets *]
+update_files -from_files C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd -to_files C:/Users/User/Documents/GitHub/Unidade_de_controle/Unidade_de_controle.srcs/sources_1/imports/processador_6_instrucoes/bloco_controle.vhd -filesets [get_filesets *]
+update_files -from_files C:/Users/User/Documents/GitHub/Processador_6_instrucoes/unidade_de_controle.vhd -to_files C:/Users/User/Documents/GitHub/Unidade_de_controle/Unidade_de_controle.srcs/sources_1/imports/processador_6_instrucoes/unidade_de_controle.vhd -filesets [get_filesets *]
+update_files -from_files C:/Users/User/Documents/GitHub/Processador_6_instrucoes/teste_bloco_de_controle/top_level_controle.vhd -to_files C:/Users/User/Documents/GitHub/Unidade_de_controle/Unidade_de_controle.srcs/sources_1/new/top_level_controle.vhd -filesets [get_filesets *]
+update_compile_order -fileset sources_1
+update_files -from_files C:/Users/User/Documents/GitHub/Processador_6_instrucoes/teste_bloco_operacional/top_level_operacional.vhd -to_files C:/Users/User/Documents/GitHub/Bloco_Operacional/Bloco_Operacional.srcs/sources_1/new/top_level_operacional.vhd -filesets [get_filesets *]
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+set_property is_enabled false [get_files  C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/processador_6_instrucoes.vhd]
+update_compile_order -fileset sources_1
+set_property is_enabled false [get_files  {{C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/imports/Projeto Final/Bloco_Operacional/Bloco_Operacional.srcs/sources_1/new/bloco_operacional.vhd} C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MemoryD/memD.vhd C:/Users/User/Documents/GitHub/Processador_6_instrucoes/teste_bloco_operacional/top_level_operacional.vhd}]
+set_property is_enabled false [get_files  {C:/Users/User/Documents/GitHub/Processador_6_instrucoes/ALU.vhd C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MUX3x1.vhd C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd C:/Users/User/Documents/GitHub/Processador_6_instrucoes/flag0.vhd}]
+set_property is_enabled false [get_files  C:/Users/User/Documents/GitHub/Processador_6_instrucoes/teste_bloco_de_controle/top_level_controle.vhd]
+set_property is_enabled false [get_files  C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MemoryI/memI.vhd]
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close [ open C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/topUnidadeControle.vhd w ]
+add_files C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/topUnidadeControle.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation

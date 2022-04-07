@@ -1,14 +1,15 @@
 #-----------------------------------------------------------
-# Webtalk v2020.2 (64-bit)
-# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
-# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Thu Apr  7 04:33:33 2022
-# Process ID: 10512
-# Current directory: C:/Users/Luiz/Desktop/Projeto de circuitos integrados digitais/Projeto Final/processador_6_instrucoes/processador_6_instrucoes.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/Luiz/Desktop/Projeto de circuitos integrados digitais/Projeto Final/processador_6_instrucoes/processador_6_instrucoes.sim/sim_1/behav/xsim/xsim.dir/tb_processador_6_instrucoes_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Users/Luiz/Desktop/Projeto de circuitos integrados digitais/Projeto Final/processador_6_instrucoes/processador_6_instrucoes.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: C:/Users/Luiz/Desktop/Projeto de circuitos integrados digitais/Projeto Final/processador_6_instrucoes/processador_6_instrucoes.sim/sim_1/behav/xsim\webtalk.jou
+# Webtalk v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Apr  7 18:22:04 2022
+# Process ID: 18820
+# Current directory: C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.sim/sim_1/behav/xsim/xsim.dir/top_level_controle_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/Luiz/Desktop/Projeto -notrace
-couldn't read file "C:/Users/Luiz/Desktop/Projeto": permission denied
-INFO: [Common 17-206] Exiting Webtalk at Thu Apr  7 04:33:34 2022...
+source C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.sim/sim_1/behav/xsim/xsim.dir/top_level_controle_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.sim/sim_1/behav/xsim/xsim.dir/top_level_controle_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Apr  7 18:22:11 2022. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2021.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 86.258 ; gain = 4.535
+INFO: [Common 17-206] Exiting Webtalk at Thu Apr  7 18:22:11 2022...

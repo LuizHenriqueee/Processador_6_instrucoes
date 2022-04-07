@@ -63,7 +63,7 @@ begin
 							  RF_s0 => RF_s0,
 							  D_addr => D_addr,
 							  RF_W_data => RF_W_data, 
-							  PC_id => sPC_id, 
+							  PC_id => sPC_Id, 
 							  PC_clr => sPC_clr, 
 							  PC_inc => sPC_inc, 
 							  I_rd => I_rd, 
@@ -83,10 +83,13 @@ begin
 							    PC_in => ss,
 							    PC => s_PC);
  U2: InstructionRegister port map(clk => clk,
-								  IR_Id => sPC_Id,
+								  IR_Id => sIR_id,
 							      data_in => data,
 							      data_out => s_IR);
  U3: somador port map(a => s_PC,
 					  b => s_IR(7 DOWNTO 0),
 					  s => ss);
+					  
+PC <= s_PC;
+
 end; 
