@@ -6,7 +6,6 @@ entity top_level_operacional is
         D_rd : in STD_LOGIC;
         D_wr : in STD_LOGIC;
         clk: in STD_LOGIC;
-        clk_Dmem: in std_logic;
         RF_W_data : in STD_LOGIC_VECTOR (7 downto 0);
         RF_s1 : in STD_LOGIC;
         RF_s0 : in STD_LOGIC;
@@ -55,7 +54,7 @@ architecture Behavioral of top_level_operacional is
 begin
     -- Memoria de dados
     memoryD: memD port map
-         ( clk => clk_Dmem,
+         ( clk => clk,
            addr => D_addr,
            D_rd => D_rd,
            D_wr => D_wr,
