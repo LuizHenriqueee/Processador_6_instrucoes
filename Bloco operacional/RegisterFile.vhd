@@ -1,36 +1,6 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 04/06/2022 01:32:15 PM
--- Design Name: 
--- Module Name: RegisterFile - behavorial
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity RegisterFile is
     Port ( clk : in STD_LOGIC;
@@ -48,11 +18,11 @@ end RegisterFile;
 architecture behavorial of RegisterFile is
 
     type registerFile is array(15 downto 0) of STD_LOGIC_VECTOR(15 downto 0);
-    signal RF : registerFile; 
-    
-    
-begin
+    signal RF : registerFile; -- Memoria do banco de registradores
 
+
+begin
+    -- processo para escrita no banco de resgistradores
     mem_wr: process(clk, W_wr)
     begin
         if rising_edge(clk) then
@@ -62,9 +32,10 @@ begin
         end if;
     end process;
 
+    -- processo para leitura no banco de registradores
     mem_up: process(clk, Rp_rd)
     begin
-        if rising_edge(clk) then     
+        if rising_edge(clk) then
         if(Rp_rd = '1') then
                 Rp_data <= RF(CONV_INTEGER(Rp_addr));
         end if;
@@ -76,7 +47,7 @@ begin
         if(Rq_rd = '1') then
             Rq_data <= RF(CONV_INTEGER(Rq_addr));
         end if;
-        end if;    
+        end if;
     end process;
 
 

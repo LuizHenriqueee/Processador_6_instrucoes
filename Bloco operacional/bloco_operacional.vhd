@@ -1,35 +1,6 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 06.04.2022 15:17:58
--- Design Name: 
--- Module Name: bloco_operacional - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+use IEEE.NUMERIC_STD.ALL;
 
 entity bloco_operacional is
     Port ( clk: in STD_LOGIC;
@@ -50,7 +21,7 @@ entity bloco_operacional is
 end bloco_operacional;
 
 architecture Behavioral of bloco_operacional is
-    
+
     component MUX3x1 is
     Port ( in_0 : in STD_LOGIC_VECTOR (15 downto 0);
            in_1 : in STD_LOGIC_VECTOR (15 downto 0);
@@ -59,7 +30,7 @@ architecture Behavioral of bloco_operacional is
            s1 : in STD_LOGIC;
            mux3x1_out : out STD_LOGIC_VECTOR (15 downto 0));
     end component;
-    
+
     component RegisterFile is
     Port ( clk : in STD_LOGIC;
            W_RF_data : in STD_LOGIC_VECTOR (15 downto 0);
@@ -80,24 +51,26 @@ architecture Behavioral of bloco_operacional is
            alu_s0 : in STD_LOGIC;
            alu_out : out STD_LOGIC_VECTOR (15 downto 0));
     end component;
-    
-    component flag0 is 
+
+    component flag0 is
 	port(	a: in STD_LOGIC_VECTOR(15 downto 0);
 			y: out STD_LOGIC);
     end component;
-    
+
     signal s_alu_out, s_mux3x1, s_Rp_data, s_Rq_data : STD_LOGIC_VECTOR (15 downto 0);
 begin
-    
-    MUX_3x1: MUX3x1 port map 
+
+    -- Multiplexador de 3 entradas
+    MUX_3x1: MUX3x1 port map
          ( in_0 => s_alu_out,
            in_1 => R_DR_data,
            in_2 => RF_W_data,
            s0 => RF_s0,
            s1 => RF_s1,
            mux3x1_out => s_mux3x1);
-           
-    RF: RegisterFile port map 
+
+    -- Banco de registradores
+    RF: RegisterFile port map
                 ( clk => clk,
                   W_RF_data => s_mux3x1,
                   W_addr => RF_W_addr,
@@ -108,18 +81,21 @@ begin
                   Rq_rd => RF_Rq_rd,
                   Rp_data => s_Rp_data,
                   Rq_data => s_Rq_data);
-           
-     
-     myalu: ALU port map 
+
+
+    -- Unidade de operação logica e aritmetica
+     myalu: ALU port map
          ( A => s_Rp_data,
            B => s_Rq_data,
            alu_s1 => alu_s1,
            alu_s0 => alu_s0,
            alu_out => s_alu_out);
-    
+
+    -- Identifica se a entrada é igual a 0
     zerp_flag: flag0 port map
             ( a => s_Rp_data,
-			  y => RF_Rp_zero);   
+			  y => RF_Rp_zero);
 
-    W_DR_data <= s_Rp_data; -- Entrada da memoria D
+    -- Entrada da memoria D, na operação de escrita de constante
+    W_DR_data <= s_Rp_data;
 end Behavioral;
