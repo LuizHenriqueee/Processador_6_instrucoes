@@ -1,0 +1,33 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 71e51cb56bb34c09a4374b21dc3a2f1a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_processador_6_instrucoes_behav xil_defaultlib.tb_processador_6_instrucoes -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling architecture synth of entity xil_defaultlib.bloco_controle [bloco_controle_default]
+Compiling architecture behavorial of entity xil_defaultlib.programCounter [programcounter_default]
+Compiling architecture behavorial of entity xil_defaultlib.InstructionRegister [instructionregister_default]
+Compiling architecture asynth of entity xil_defaultlib.somador [somador_default]
+Compiling architecture uc of entity xil_defaultlib.unidade_de_controle [unidade_de_controle_default]
+Compiling architecture behavioral of entity xil_defaultlib.memoryI [memoryi_default]
+Compiling architecture behavioral of entity xil_defaultlib.top_level_controle [top_level_controle_default]
+Compiling architecture behavorial of entity xil_defaultlib.memD [memd_default]
+Compiling architecture behavioral of entity xil_defaultlib.MUX3x1 [mux3x1_default]
+Compiling architecture behavorial of entity xil_defaultlib.RegisterFile [registerfile_default]
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture synth of entity xil_defaultlib.flag0 [flag0_default]
+Compiling architecture behavioral of entity xil_defaultlib.bloco_operacional [bloco_operacional_default]
+Compiling architecture behavioral of entity xil_defaultlib.top_level_operacional [top_level_operacional_default]
+Compiling architecture behavioral of entity xil_defaultlib.processador_6_instrucoes [processador_6_instrucoes_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_processador_6_instrucoes
+Built simulation snapshot tb_processador_6_instrucoes_behav
