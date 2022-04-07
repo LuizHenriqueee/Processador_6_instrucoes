@@ -33,7 +33,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity top_level_controle is
   Port (clk, reset: in STD_LOGIC;
-        clk_Imem: in std_logic;
 	    RF_Rp_zero: in STD_LOGIC;
 	    D_addr, RF_W_data: out STD_LOGIC_VECTOR(7 downto 0);
 	    RF_W_addr, RF_Rp_addr, RF_Rq_addr: out STD_LOGIC_VECTOR(3 downto 0);
@@ -54,8 +53,7 @@ architecture Behavioral of top_level_controle is
     end component;
     
     component memoryI is
-    Port ( clk  : in STD_LOGIC;
-           addr : in STD_LOGIC_VECTOR (15 downto 0);
+    Port ( addr : in STD_LOGIC_VECTOR (15 downto 0);
            rd : in STD_LOGIC;
            data : out STD_LOGIC_VECTOR (15 downto 0));
     end component;
@@ -86,9 +84,9 @@ begin
 			alu_s0 => alu_s0);
     
     memoria_I: memoryI port map 
-         ( clk  => clk_Imem,
-           addr => s_PC,
+         ( addr => s_PC,
            rd => s_I_rd,
            data => s_data_I);
+          
 
 end Behavioral;

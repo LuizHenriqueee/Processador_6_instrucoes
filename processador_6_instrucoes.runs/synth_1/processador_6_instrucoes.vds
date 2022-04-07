@@ -1,0 +1,275 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Apr  7 15:55:09 2022
+# Process ID: 14572
+# Current directory: C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.runs/synth_1
+# Command line: vivado.exe -log processador_6_instrucoes.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source processador_6_instrucoes.tcl
+# Log file: C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.runs/synth_1/processador_6_instrucoes.vds
+# Journal file: C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source processador_6_instrucoes.tcl -notrace
+Command: synth_design -top processador_6_instrucoes -part xc7a12ticsg325-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18648
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1155.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'processador_6_instrucoes' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/processador_6_instrucoes.vhd:40]
+INFO: [Synth 8-3491] module 'top_level_controle' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/teste_bloco_de_controle/top_level_controle.vhd:34' bound to instance 'bloco_controle' of component 'top_level_controle' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/processador_6_instrucoes.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'top_level_controle' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/teste_bloco_de_controle/top_level_controle.vhd:42]
+INFO: [Synth 8-3491] module 'unidade_de_controle' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/unidade_de_controle.vhd:5' bound to instance 'unit_control' of component 'unidade_de_controle' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/teste_bloco_de_controle/top_level_controle.vhd:64]
+INFO: [Synth 8-638] synthesizing module 'unidade_de_controle' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/unidade_de_controle.vhd:16]
+INFO: [Synth 8-3491] module 'bloco_controle' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:4' bound to instance 'U0' of component 'bloco_controle' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/unidade_de_controle.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'bloco_controle' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:17]
+INFO: [Synth 8-226] default block is never used [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:58]
+WARNING: [Synth 8-614] signal 'RF_Rp_zero' is read in the process but is not in the sensitivity list [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:44]
+WARNING: [Synth 8-614] signal 'd' is read in the process but is not in the sensitivity list [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:75]
+WARNING: [Synth 8-614] signal 'ra' is read in the process but is not in the sensitivity list [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:75]
+WARNING: [Synth 8-614] signal 'rb' is read in the process but is not in the sensitivity list [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:75]
+WARNING: [Synth 8-614] signal 'rc' is read in the process but is not in the sensitivity list [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'bloco_controle' (1#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/bloco_controle.vhd:17]
+INFO: [Synth 8-3491] module 'programCounter' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/ProgramCounter/PC/pc.vhd:34' bound to instance 'U1' of component 'programCounter' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/unidade_de_controle.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'programCounter' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/ProgramCounter/PC/pc.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'programCounter' (2#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/ProgramCounter/PC/pc.vhd:43]
+INFO: [Synth 8-3491] module 'InstructionRegister' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/imports/Projeto Final/Unidade_de_controle/Unidade_de_controle.srcs/sources_1/imports/IR/InstructionRegister.vhd:34' bound to instance 'U2' of component 'InstructionRegister' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/unidade_de_controle.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'InstructionRegister' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/imports/Projeto Final/Unidade_de_controle/Unidade_de_controle.srcs/sources_1/imports/IR/InstructionRegister.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'InstructionRegister' (3#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/imports/Projeto Final/Unidade_de_controle/Unidade_de_controle.srcs/sources_1/imports/IR/InstructionRegister.vhd:41]
+INFO: [Synth 8-3491] module 'somador' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/somador.vhd:5' bound to instance 'U3' of component 'somador' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/unidade_de_controle.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'somador' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/somador.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'somador' (4#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/somador.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'unidade_de_controle' (5#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/unidade_de_controle.vhd:16]
+INFO: [Synth 8-3491] module 'memoryI' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MemoryI/memI.vhd:38' bound to instance 'memoria_I' of component 'memoryI' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/teste_bloco_de_controle/top_level_controle.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'memoryI' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MemoryI/memI.vhd:44]
+WARNING: [Synth 8-614] signal 'memI' is read in the process but is not in the sensitivity list [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MemoryI/memI.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'memoryI' (6#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MemoryI/memI.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'top_level_controle' (7#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/teste_bloco_de_controle/top_level_controle.vhd:42]
+INFO: [Synth 8-3491] module 'top_level_operacional' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/teste_bloco_operacional/top_level_operacional.vhd:34' bound to instance 'bloco_operacional' of component 'top_level_operacional' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/processador_6_instrucoes.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'top_level_operacional' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/teste_bloco_operacional/top_level_operacional.vhd:54]
+INFO: [Synth 8-3491] module 'memD' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MemoryD/memD.vhd:35' bound to instance 'memoryD' of component 'memD' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/teste_bloco_operacional/top_level_operacional.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'memD' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MemoryD/memD.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'memD' (8#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MemoryD/memD.vhd:46]
+INFO: [Synth 8-3491] module 'bloco_operacional' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/imports/Projeto Final/Bloco_Operacional/Bloco_Operacional.srcs/sources_1/new/bloco_operacional.vhd:34' bound to instance 'operating_block' of component 'bloco_operacional' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/teste_bloco_operacional/top_level_operacional.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'bloco_operacional' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/imports/Projeto Final/Bloco_Operacional/Bloco_Operacional.srcs/sources_1/new/bloco_operacional.vhd:52]
+INFO: [Synth 8-3491] module 'MUX3x1' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MUX3x1.vhd:26' bound to instance 'MUX_3x1' of component 'MUX3x1' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/imports/Projeto Final/Bloco_Operacional/Bloco_Operacional.srcs/sources_1/new/bloco_operacional.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'MUX3x1' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MUX3x1.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'MUX3x1' (9#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MUX3x1.vhd:35]
+INFO: [Synth 8-3491] module 'RegisterFile' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:35' bound to instance 'RF' of component 'RegisterFile' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/imports/Projeto Final/Bloco_Operacional/Bloco_Operacional.srcs/sources_1/new/bloco_operacional.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'RegisterFile' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:48]
+WARNING: [Synth 8-614] signal 'W_wr' is read in the process but is not in the sensitivity list [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:56]
+WARNING: [Synth 8-614] signal 'W_data' is read in the process but is not in the sensitivity list [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:56]
+WARNING: [Synth 8-614] signal 'W_addr' is read in the process but is not in the sensitivity list [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:56]
+WARNING: [Synth 8-614] signal 'RF' is read in the process but is not in the sensitivity list [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:63]
+WARNING: [Synth 8-614] signal 'Rp_addr' is read in the process but is not in the sensitivity list [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:63]
+WARNING: [Synth 8-614] signal 'Rq_addr' is read in the process but is not in the sensitivity list [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'RegisterFile' (10#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:48]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/ALU.vhd:5' bound to instance 'myalu' of component 'ALU' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/imports/Projeto Final/Bloco_Operacional/Bloco_Operacional.srcs/sources_1/new/bloco_operacional.vhd:113]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/ALU.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (11#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/ALU.vhd:13]
+INFO: [Synth 8-3491] module 'flag0' declared at 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/flag0.vhd:4' bound to instance 'zerp_flag' of component 'flag0' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/imports/Projeto Final/Bloco_Operacional/Bloco_Operacional.srcs/sources_1/new/bloco_operacional.vhd:120]
+INFO: [Synth 8-638] synthesizing module 'flag0' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/flag0.vhd:9]
+INFO: [Synth 8-256] done synthesizing module 'flag0' (12#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/flag0.vhd:9]
+INFO: [Synth 8-256] done synthesizing module 'bloco_operacional' (13#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/imports/Projeto Final/Bloco_Operacional/Bloco_Operacional.srcs/sources_1/new/bloco_operacional.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'top_level_operacional' (14#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/teste_bloco_operacional/top_level_operacional.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'processador_6_instrucoes' (15#1) [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.srcs/sources_1/new/processador_6_instrucoes.vhd:40]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1155.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1155.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a12ticsg325-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1155.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a12ticsg325-1L
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'bloco_controle'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  inicio |                       0000000001 |                             0000
+                   busca |                       0000000010 |                             0001
+              decodifica |                       0000000100 |                             0010
+                 carrega |                       0000001000 |                             0011
+                armazena |                       0000010000 |                             0100
+                    soma |                       0000100000 |                             0101
+               constante |                       0001000000 |                             0110
+                subtrair |                       0010000000 |                             0111
+               saltar_se |                       0100000000 |                             1000
+                  saltar |                       1000000000 |                             1001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'bloco_controle'
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/MemoryI/memI.vhd:91]
+WARNING: [Synth 8-327] inferring latch for variable 'Rp_data_reg' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:67]
+WARNING: [Synth 8-327] inferring latch for variable 'Rq_data_reg' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:70]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_reg[15]' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_reg[14]' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_reg[13]' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_reg[12]' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_reg[11]' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_reg[10]' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_reg[9]' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_reg[8]' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_reg[7]' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_reg[6]' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_reg[5]' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_reg[4]' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_reg[3]' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_reg[2]' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_reg[1]' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'RF_reg[0]' [C:/Users/User/Documents/GitHub/Processador_6_instrucoes/RegisterFile/RegisterFile.vhd:59]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1155.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   16 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 2     
++---RAMs : 
+	               4K Bit	(256 X 16 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 6     
+	  10 Input   10 Bit        Muxes := 1     
+	   7 Input   10 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 1     
+	  10 Input    8 Bit        Muxes := 1     
+	  10 Input    4 Bit        Muxes := 3     
+	  10 Input    1 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 17    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 40 (col length:40)
+BRAMs: 40 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1155.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1155.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1155.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1155.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1155.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1155.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1155.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1155.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1155.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1155.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 31 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1155.227 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1155.227 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1155.227 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1155.227 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 9e763ac
+INFO: [Common 17-83] Releasing license: Synthesis
+57 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1155.227 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/User/Documents/GitHub/Processador_6_instrucoes/processador_6_instrucoes.runs/synth_1/processador_6_instrucoes.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file processador_6_instrucoes_utilization_synth.rpt -pb processador_6_instrucoes_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  7 15:55:30 2022...

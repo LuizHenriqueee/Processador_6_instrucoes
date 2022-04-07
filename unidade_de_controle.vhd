@@ -81,12 +81,12 @@ begin
 							    PC_clr => sPC_clr,
 							    PC_inc => sPC_inc,
 							    PC_in => ss,
-							    PC => s_PC,);
+							    PC => s_PC);
  U2: InstructionRegister port map(clk => clk,
 								  IR_Id => sPC_Id,
 							      data_in => data,
 							      data_out => s_IR);
  U3: somador port map(a => s_PC,
-					  b => s_IR,
+					  b => s_IR(7 DOWNTO 0),
 					  s => ss);
 end; 

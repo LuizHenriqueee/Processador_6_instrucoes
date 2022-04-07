@@ -33,7 +33,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity processador_6_instrucoes is
     Port (clk: in std_logic;
-          clk_Imem: in std_logic;
           clk_Dmem: in std_logic;
           reset: in std_logic);
 end processador_6_instrucoes;
@@ -42,7 +41,6 @@ architecture Behavioral of processador_6_instrucoes is
     
   component top_level_controle is
   Port (clk, reset: in STD_LOGIC;
-        clk_Imem: in std_logic;
 	    RF_Rp_zero: in STD_LOGIC;
 	    D_addr, RF_W_data: out STD_LOGIC_VECTOR(7 downto 0);
 	    RF_W_addr, RF_Rp_addr, RF_Rq_addr: out STD_LOGIC_VECTOR(3 downto 0);
@@ -78,7 +76,6 @@ begin
      bloco_controle: top_level_controle port map 
        (clk => clk, 
         reset => reset,
-        clk_Imem => clk_Imem,
 	    RF_Rp_zero => RF_Rp_zero,
 	    D_addr => D_addr, 
 	    RF_W_data => RF_W_data,

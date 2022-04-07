@@ -62,7 +62,7 @@ architecture Behavioral of bloco_operacional is
     
     component RegisterFile is
     Port ( clk : in STD_LOGIC;
-           W_RF_data : in STD_LOGIC_VECTOR (15 downto 0);
+           W_data : in STD_LOGIC_VECTOR (15 downto 0);
            W_addr : in STD_LOGIC_VECTOR (3 downto 0);
            W_wr : in STD_LOGIC;
            Rp_addr : in STD_LOGIC_VECTOR (3 downto 0);
@@ -99,7 +99,7 @@ begin
            
     RF: RegisterFile port map 
                 ( clk => clk,
-                  W_RF_data => s_mux3x1,
+                  W_data => s_mux3x1,
                   W_addr => RF_W_addr,
                   W_wr => RF_W_wr,
                   Rp_addr => RF_Rp_addr,

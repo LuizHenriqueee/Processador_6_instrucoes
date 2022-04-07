@@ -1,4 +1,5 @@
-use IEEE.STD_LOGIC_ARITH.all;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.all;
 
 entity somador is 
@@ -8,8 +9,8 @@ entity somador is
 end somador;
 
 architecture asynth of somador is
-signal soma, b1: signed(15 downto 0);
+    signal sum : unsigned(15 downto 0);
 begin
-	b1<=b(7)&b;
-	s<=std_logic_vector((signed(a)+b1)-"0000000000000001");
+	sum<=unsigned(a)+unsigned(b);
+	s <= STD_LOGIC_VECTOR(sum - X"0001");
 end;

@@ -22,8 +22,9 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.NUMERIC_STD.ALL;
 use STD.textio.ALL;
-use ieee.std_logic_textio.ALL;
+--use ieee.std_logic_textio.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -35,25 +36,26 @@ use ieee.std_logic_textio.ALL;
 --use UNISIM.VComponents.all;
 
 entity memoryI is
-    Port ( clk  : in STD_LOGIC;
-           addr : in STD_LOGIC_VECTOR (15 downto 0);
+    Port ( addr : in STD_LOGIC_VECTOR (15 downto 0);
            rd : in STD_LOGIC;
            data : out STD_LOGIC_VECTOR (15 downto 0));
 end memoryI;
 
 architecture Behavioral of memoryI is
 
-    type memI_type is array (2**16 - 1 downto 0) of STD_LOGIC_VECTOR (15 downto 0);
+    type memI_type is array (2**8 - 1 downto 0) of STD_LOGIC_VECTOR (15 downto 0);
     signal memI : memI_type;
+    signal test: integer;
     
 
 begin
 
-    process
+    mem_init:process
         file hex_File: text open read_mode is "hexFile.mem";
         variable index: integer;
-        variable L : line;
-        variable data_line : STD_LOGIC_VECTOR(15 downto 0);
+        variable data_line : line;
+        variable hex_val: integer range 65535 to 0;
+        variable char: character;
         
         begin
         
@@ -64,23 +66,30 @@ begin
         index:=0;
         
         while not endfile(hex_file) loop
-            readline(hex_file, L);
-            hread(L, data_line);
-            memI(index) <= data_line;
+            readline(hex_file, data_line);
+            hex_val := 0;
+            for k in 0 to 3 loop
+                    read(data_line, char);
+                    if char <= '9' and char >= '0' then
+                        hex_val := hex_val*(16) + character'pos(char) - character'pos('0');
+                    elsif char >= 'a' and char <= 'f' then
+                        hex_val := hex_val*(16) + character'pos(char) - character'pos('a')+10;
+                    elsif char>='A' and char <= 'F' then 
+                        hex_val := hex_val*(16) + character'pos(char) - character'pos('A')+10;
+                    end if;
+            end loop;
+            memI(index) <= STD_LOGIC_VECTOR(TO_UNSIGNED(hex_val, data'length));
+
             index := index + 1;
         end loop;
         wait;        
         end process;
         
-        
-        process(clk)
-        begin
-            if rising_edge(clk) then
-                if rd = '1' then
-                    data <= memI(CONV_INTEGER(addr));
-                end if;
-            end if;
-        end process;
-
-
+     data_out:process(rd,addr)
+     begin
+        if rd='1' then 
+        data <= memI(CONV_INTEGER(addr));
+        end if;
+     end process;
+     
 end Behavioral;
