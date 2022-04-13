@@ -45,22 +45,21 @@ end memD;
 
 architecture behavorial of memD is
 
-    type array_mem is array ((2**8 - 1) downto 0) of STD_LOGIC_VECTOR (15 DOWNTO 0);
+    type array_mem is array ((25 - 1) downto 0) of STD_LOGIC_VECTOR (15 DOWNTO 0);
     signal memory: array_mem;
     
     
 begin
 
-    process(clk, D_wr, D_rd)
+    process(clk)
     begin
         if rising_edge(clk) then
-            if D_wr = '1' then
-                memory(CONV_INTEGER(addr)) <= W_data;
-            end if;
             if D_rd = '1' then
-                R_data<=memory(CONV_INTEGER(addr));
+                 R_data<=memory(CONV_INTEGER(addr));
             end if;
         end if;
-    end process;   
+    end process;
 
+    memory(CONV_INTEGER(addr)) <= W_data when D_wr = '1';
+    
 end behavorial;

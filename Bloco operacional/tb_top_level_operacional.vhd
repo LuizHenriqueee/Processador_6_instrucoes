@@ -79,6 +79,7 @@ begin
    clk <= not clk after period/2;
    stimulus: process
                 begin
+                wait for period/2;
                 -- Carregar constante
                 RF_W_data <= "00001000";
                 RF_s1 <= '1';
@@ -89,18 +90,20 @@ begin
                 -- Armazenar
                 D_addr <= "00010001";
                 D_wr <= '1';
+                RF_W_wr <= '0';
                 RF_Rp_addr <= "0010";
                 RF_Rp_rd <= '1';
-                wait for 2*period;
+                wait for period;
                 -- Carregar
+                RF_W_data <= "00001000";
                 D_wr <= '0';
                 D_addr <= "00010001";
                 D_rd <= '1';
-                RF_s1 <= '0';
-                RF_s0 <= '1';
+                RF_s1 <= '1';
+                RF_s0 <= '0';
                 RF_W_addr <= "0011";
                 RF_W_wr <= '1';
-                wait for  2*period;
+                wait for  period;
                 -- Somar
                 RF_W_wr <= '1';
                 RF_s1 <= '0';
@@ -112,7 +115,7 @@ begin
                 RF_Rq_addr <= "0011";
                 alu_s1 <= '0';
                 alu_s0 <= '1';
-                wait for 2*period;
+                wait for period;
                 -- Subtrair
                 RF_W_wr <= '1';
                 RF_s1 <= '0';
@@ -126,10 +129,8 @@ begin
                 alu_s0 <= '0';
                 wait for period;
                 -- Saltar se zero
-                RF_Rp_addr <= "0100";
-                RF_Rp_rd <= '1';
-                wait for period;
                 RF_Rp_addr <= "0101";
                 RF_Rp_rd <= '1';
+                wait for period/2;
              end process;
 end Behavioral;

@@ -50,11 +50,14 @@ architecture Behavioral of top_level_operacional is
     end component;
 
     signal s_W_data, s_R_data: std_logic_vector(15 downto 0);
+    signal s_clk: STD_LOGIC;
 
 begin
+
+    s_clk <= clk;
     -- Memoria de dados
     memoryD: memD port map
-         ( clk => clk,
+         ( clk => s_clk,
            addr => D_addr,
            D_rd => D_rd,
            D_wr => D_wr,
@@ -63,7 +66,7 @@ begin
 
     -- Bloco operacional com a ALU, RF, flag0 e o MUX3x1
     operating_block: bloco_operacional port map
-         ( clk => clk,
+         ( clk => s_clk,
            R_DR_data => s_R_data,
            RF_W_data => RF_W_data,
            RF_s1 => RF_s1,

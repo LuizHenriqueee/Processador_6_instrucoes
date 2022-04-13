@@ -22,33 +22,22 @@ architecture behavorial of RegisterFile is
 
 
 begin
-    -- processo para escrita no banco de resgistradores
-    mem_wr: process(clk, W_wr)
-    begin
-        if rising_edge(clk) then
-        if(W_wr = '1') then
-            RF(CONV_INTEGER(W_addr)) <= W_RF_data;
-        end if;
-        end if;
-    end process;
 
-    -- processo para leitura no banco de registradores
-    mem_up: process(clk, Rp_rd)
-    begin
+     --processo para leitura no banco de registradores
+    mem_rd: process(clk)
+    begin    
         if rising_edge(clk) then
-        if(Rp_rd = '1') then
+            if(Rp_rd = '1') then
                 Rp_data <= RF(CONV_INTEGER(Rp_addr));
-        end if;
-        end if;
-    end process;
-    process(clk,Rq_rd)
-    begin
-        if rising_edge(clk) then
-        if(Rq_rd = '1') then
-            Rq_data <= RF(CONV_INTEGER(Rq_addr));
-        end if;
+            end if;
+            if(Rq_rd = '1') then
+                Rq_data <= RF(CONV_INTEGER(Rq_addr));
+            end if;
         end if;
     end process;
-
+    
+    -- escrita no banco de resgistradores
+    
+    RF(CONV_INTEGER(W_addr)) <= W_RF_data when W_wr='1';
 
 end behavorial;
