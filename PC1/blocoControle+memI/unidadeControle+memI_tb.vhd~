@@ -1,9 +1,42 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date: 04/07/2022 04:32:35 PM
+-- Design Name: 
+-- Module Name: topUnidadeControle - Behavioral
+-- Project Name: 
+-- Target Devices: 
+-- Tool Versions: 
+-- Description: 
+-- 
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx leaf cells in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
 entity topUnidadeControle_tb is
+--  Port ( );
 end topUnidadeControle_tb;
 
 architecture Behavioral of topUnidadeControle_tb is
+
 
 component top_level_controle is
   Port (clk, reset: in STD_LOGIC;
@@ -31,7 +64,6 @@ begin
     );
     
     
-    -- test bench apenas para o estímulo do clock.
     clk_stim: process
     begin
         clk <= '0';
