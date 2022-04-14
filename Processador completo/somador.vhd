@@ -9,10 +9,10 @@ entity somador is
 end somador;
 
 architecture asynth of somador is
-    signal sum : unsigned(15 downto 0);
+    signal sum : signed(15 downto 0);
 begin
 	--Realiza a soma utilizando dois unsigned.
-	sum<=unsigned(a)+unsigned(b);
+	sum<=signed(a)+signed(b);
 	--Atribuí como sendo um standard logic vector.
 	s <= STD_LOGIC_VECTOR(sum - X"0001");
 end;
