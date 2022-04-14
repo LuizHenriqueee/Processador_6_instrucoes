@@ -57,7 +57,7 @@ architecture Behavioral of bloco_operacional is
 			y: out STD_LOGIC);
     end component;
 
-    signal s_alu_out, s_mux3x1, s_Rp_data, s_Rq_data : STD_LOGIC_VECTOR (15 downto 0);
+    signal s_alu_out, s_mux3x1, s_Rp_data, s_Rq_data: STD_LOGIC_VECTOR (15 downto 0);
 begin
 
     -- Multiplexador de 3 entradas
