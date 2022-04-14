@@ -39,16 +39,36 @@ architecture Behavioral of tb_processador_6_instrucoes is
     
     component processador_6_instrucoes is
     Port (clk: in std_logic;
-          reset: in std_logic);
+          reset: in std_logic;
+          data: in std_logic_vector(15 downto 0);
+          PC: out std_logic_vector(15 downto 0);
+          I_rd: out  std_logic);
+    end component;
+    
+    component memoryI is
+    Port ( addr : in STD_LOGIC_VECTOR (15 downto 0);
+           rd : in STD_LOGIC;
+           data : out STD_LOGIC_VECTOR (15 downto 0));
     end component;
     
     signal clk, reset: std_logic := '0';
+    signal data:  std_logic_vector(15 downto 0);
+    signal PC:  std_logic_vector(15 downto 0);
+    signal I_rd:   std_logic;
+    
     constant period: time := 5 ns;
 begin
     
-    utt: processador_6_instrucoes port map 
-         (clk => clk,
-          reset => reset);
+    processador: processador_6_instrucoes port map 
+                 (clk => clk,
+                  reset => reset,
+                  data => data,
+                  PC => PC,
+                  I_rd => I_rd);
+    memoria_I: memoryI port map 
+         ( addr => PC,
+           rd => I_rd,
+           data => data);
     
     clk <= not clk after period/2;
     reset <= '1', '0' after period; 
