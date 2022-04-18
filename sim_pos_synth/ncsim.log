@@ -1,0 +1,13 @@
+ncsim(64): 15.20-s033: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /opt/cadence/incisive/tools/inca/files/ncsimrc
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm :clk :data :I_rd :PC :reset
+Created probe 1
+ncsim> run {1000 ns}
+Ran until 1 US + 0
+ncsim> 

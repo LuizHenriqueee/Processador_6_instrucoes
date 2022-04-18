@@ -1,0 +1,4 @@
+ncelab(64): 15.20-s033: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+ncelab: *W,ARCMRA: Elaborating the WORKLIB.TB_PROCESSADOR_6_INSTRUCOES:BEHAVIORAL, MRA (most recently analyzed) architecture.
+ncelab: Memory Usage - 49.8M program + 51.0M data = 100.8M total (Peak 103.5M)
+ncelab: CPU Usage - 0.1s system + 0.4s user = 0.4s total (1.5s, 28.4% cpu)
