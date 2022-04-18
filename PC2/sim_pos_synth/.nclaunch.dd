@@ -1,0 +1,44 @@
+# DO NOT EDIT -- automatically generated design data file -- DO NOT EDIT!!!
+list \
+workdir {/home/alunos/Desktop/FELIPE_SOBRINHO/PCID/PF/sim_pos_synth} \
+cdslib {} \
+worklib {worklib} \
+mode {0} \
+filters {*} \
+sesslist {} \
+ToolOption_NCVhdl { -work worklib -cdslib /home/alunos/Desktop/FELIPE_SOBRINHO/PCID/PF/sim_pos_synth/cds.lib -logfile ncvhdl.log -errormax 15 -update -v93 -linedebug -SMARTORDER -status} \
+ToolOption_NCVlog { -work worklib -cdslib /home/alunos/Desktop/FELIPE_SOBRINHO/PCID/PF/sim_pos_synth/cds.lib -logfile ncvlog.log -errormax 15 -update -linedebug -status} \
+ToolOption_NCVlog/AMS { -work worklib -cdslib /home/alunos/Desktop/FELIPE_SOBRINHO/PCID/PF/sim_pos_synth/cds.lib -logfile ncvlog.log -errormax 15 -update -linedebug -status} \
+ToolOption_NCVlog/SV { -work worklib -cdslib /home/alunos/Desktop/FELIPE_SOBRINHO/PCID/PF/sim_pos_synth/cds.lib -logfile ncvlog.log -errormax 15 -update -linedebug -status} \
+ToolOption_irun {-gui {} +linedebug +access rwc -q} \
+ToolOption_NCElab { -work worklib -cdslib /home/alunos/Desktop/FELIPE_SOBRINHO/PCID/PF/sim_pos_synth/cds.lib -logfile ncelab.log -errormax 15 -access +wc -status -timescale 1ns/1ps} \
+ToolOption_NCSim { -gui -cdslib /home/alunos/Desktop/ludmylla/aaaaaaaaaaaa/aaa/cds.lib -logfile ncsim.log -errormax 15 -status} \
+ToolOption_NCSdfc { -logfile ncsdfc.log -compile -cdslib /home/alunos/Desktop/FELIPE_SOBRINHO/PCID/PF/sim_pos_synth/cds.lib -status} \
+ToolOption_HAL {-logfile hal.log} \
+ToolOption_SimVision {} \
+ToolOption_Update {-errormax 15 -force} \
+ToolOption_SimCompare {} \
+ToolOption_NCBrowse {} \
+ToolOption_HALDefEdit {} \
+ToolOption_NCShell {-view shell -logfile ncshell.log -errormax 15 -suffix .v} \
+ToolOption_NCProtect {-logfile ncprotect.log} \
+ToolOption_NCDC {-logfile ncdc.log -messages -status} \
+ToolOption_DBUtil {} \
+ToolOption_NCVhdl { -work worklib -cdslib /home/alunos/Desktop/FELIPE_SOBRINHO/PCID/PF/sim_pos_synth/cds.lib -logfile ncvhdl.log -errormax 15 -update -v93 -linedebug -SMARTORDER -status} \
+ToolOption_NCVlog { -work worklib -cdslib /home/alunos/Desktop/FELIPE_SOBRINHO/PCID/PF/sim_pos_synth/cds.lib -logfile ncvlog.log -errormax 15 -update -linedebug -status} \
+ToolOption_NCVlog/AMS { -work worklib -cdslib /home/alunos/Desktop/FELIPE_SOBRINHO/PCID/PF/sim_pos_synth/cds.lib -logfile ncvlog.log -errormax 15 -update -linedebug -status} \
+ToolOption_NCVlog/SV { -work worklib -cdslib /home/alunos/Desktop/FELIPE_SOBRINHO/PCID/PF/sim_pos_synth/cds.lib -logfile ncvlog.log -errormax 15 -update -linedebug -status} \
+ToolOption_irun {-gui {} +linedebug +access rwc -q} \
+ToolOption_NCElab { -work worklib -cdslib /home/alunos/Desktop/FELIPE_SOBRINHO/PCID/PF/sim_pos_synth/cds.lib -logfile ncelab.log -errormax 15 -access +wc -status -timescale 1ns/1ps} \
+ToolOption_NCSim { -gui -cdslib /home/alunos/Desktop/ludmylla/aaaaaaaaaaaa/aaa/cds.lib -logfile ncsim.log -errormax 15 -status} \
+ToolOption_NCSdfc { -logfile ncsdfc.log -compile -cdslib /home/alunos/Desktop/FELIPE_SOBRINHO/PCID/PF/sim_pos_synth/cds.lib -status} \
+ToolOption_HAL {-logfile hal.log} \
+ToolOption_SimVision {} \
+ToolOption_Update {-errormax 15 -force} \
+ToolOption_SimCompare {} \
+ToolOption_NCBrowse {} \
+ToolOption_HALDefEdit {} \
+ToolOption_NCShell {-view shell -logfile ncshell.log -errormax 15 -suffix .v} \
+ToolOption_NCProtect {-logfile ncprotect.log} \
+ToolOption_NCDC {-logfile ncdc.log -messages -status} \
+ToolOption_DBUtil {} \

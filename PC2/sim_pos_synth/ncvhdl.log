@@ -1,0 +1,4 @@
+ncvhdl(64): 15.20-s033: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+ncvhdl_p: Memory Usage - 20.0M program + 13.5M data = 33.5M total
+ncvhdl_cg: Memory Usage - 16.0M program + 12.7M data = 28.7M total
+ncvhdl: CPU Usage - 0.0s system + 0.0s user = 0.1s total (0.3s, 20.3% cpu)

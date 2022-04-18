@@ -1,0 +1,4 @@
+ncsdfc(64): 15.20-s033: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+	Reading SDF file from location "/home/alunos/Desktop/FELIPE_SOBRINHO/PCID/PF/sim_pos_synth/processador_6_instrucoes_out_sdf.sdf"
+ncsdfc: Memory Usage - 18.8M program + 16.6M data = 35.4M total
+ncsdfc: CPU Usage - 0.0s system + 0.0s user = 0.0s total (0.1s, 87.7% cpu)
