@@ -64,8 +64,8 @@ process (clk) begin -- registrador de estados que promove a mudança de estado s
 			when verifica =>
 			case RF_Rp_zero is --identificando se a flag0 está ativa para que o estado saltar seja lido ou não
 						when '1' => nextstate <= saltar;
-						when '0' => nextstate <= busca;
-						when others => nextstate <= inicio; -- caso não esperado
+						--when '0' => nextstate <= busca;
+						when others => nextstate <= busca; 
 					  end case;
 	
 			when carrega => nextstate <= busca;
@@ -81,48 +81,94 @@ process (clk) begin -- registrador de estados que promove a mudança de estado s
 	
 	process (state) begin --atualizaçãoo das saídas para cada estado
 	-- reset de todas as saídas para manipular apenas as desejadas
-			PC_clr <= '0'; PC_id <= '0'; PC_inc <= '0';
+			-- PC_clr <= '0'; PC_id <= '0'; PC_inc <= '0';
+			-- I_rd <= '0';IR_id <= '0';
+			-- D_addr <= "00000000"; D_rd <= '0'; D_wr <= '0';
+			-- RF_Rp_addr <= "0000"; RF_Rp_rd <= '0'; RF_Rq_addr <= "0000"; RF_Rq_rd <= '0';
+			-- RF_W_addr <= "0000"; RF_W_data <= "00000000"; RF_W_wr <= '0'; RF_s0 <= '0';
+			-- RF_s1 <= '0'; alu_s0 <= '0'; alu_s1 <= '0';
+	
+	case state is -- case de definição, onde a partir do estado as variaveis de controle são alteradas para comandar a operação dada pela intrução atual.
+			when inicio => PC_clr <= '1';
+			
+			PC_id <= '0'; PC_inc <= '0';
 			I_rd <= '0';IR_id <= '0';
 			D_addr <= "00000000"; D_rd <= '0'; D_wr <= '0';
 			RF_Rp_addr <= "0000"; RF_Rp_rd <= '0'; RF_Rq_addr <= "0000"; RF_Rq_rd <= '0';
 			RF_W_addr <= "0000"; RF_W_data <= "00000000"; RF_W_wr <= '0'; RF_s0 <= '0';
 			RF_s1 <= '0'; alu_s0 <= '0'; alu_s1 <= '0';
-	
-	case state is -- case de definição, onde a partir do estado as variaveis de controle são alteradas para comandar a operação dada pela intrução atual.
-			when inicio => PC_clr <= '1';
+			
 			when busca => I_rd <= '1';
 				PC_inc <= '1';
 				IR_id <= '1';
+				
+			PC_clr <= '0'; PC_id <= '0'; 
+			D_addr <= "00000000"; D_rd <= '0'; D_wr <= '0';
+			RF_Rp_addr <= "0000"; RF_Rp_rd <= '0'; RF_Rq_addr <= "0000"; RF_Rq_rd <= '0';
+			RF_W_addr <= "0000"; RF_W_data <= "00000000"; RF_W_wr <= '0'; RF_s0 <= '0';
+			RF_s1 <= '0'; alu_s0 <= '0'; alu_s1 <= '0';
+			
 			when carrega => D_addr <= d;
 				D_rd <= '1';
 				RF_s1 <= '0';
 				RF_s0 <= '1';
 				RF_W_addr <= ra;
 				RF_W_wr <='1';
+				
+				PC_clr <= '0'; PC_id <= '0'; PC_inc <= '0';
+			I_rd <= '0';IR_id <= '0';
+			 D_wr <= '0';
+			RF_Rp_addr <= "0000"; RF_Rp_rd <= '0'; RF_Rq_addr <= "0000"; RF_Rq_rd <= '0';
+			 RF_W_data <= "00000000"; 
+			 alu_s0 <= '0'; alu_s1 <= '0';
+			
 			when armazena => D_addr <= d;
 				RF_Rp_addr <= ra;
 				RF_Rp_rd <='1';
 				D_wr <= '1';
 				RF_s1 <= 'X';
-				RF_s0 <= 'X';				
+				RF_s0 <= 'X';
+
+PC_clr <= '0'; PC_id <= '0'; PC_inc <= '0';
+			I_rd <= '0';IR_id <= '0';
+			 D_rd <= '0'; 
+			  RF_Rq_addr <= "0000"; RF_Rq_rd <= '0';
+			RF_W_addr <= "0000"; RF_W_data <= "00000000"; RF_W_wr <= '0'; 
+			 alu_s0 <= '0'; alu_s1 <= '0';
+			
 			when soma => RF_Rp_addr <= rb;
-				RF_Rq_addr <= rb;
 				RF_Rp_rd <= '1';
-				RF_Rq_addr <= rc;
-				RF_Rq_rd <= '1';
-				RF_W_addr <= ra;							
 				RF_s1 <= '0';
 				RF_s0 <= '0';
+				RF_Rq_addr <= rc;
+				
+				RF_Rq_rd <= '1';
+				RF_W_addr <= ra;							
+				
 				alu_s0 <= '1';
 				alu_s1 <= '0';
-				RF_W_wr <='1';				
+				RF_W_wr <='1';	
+
+PC_clr <= '0'; PC_id <= '0'; PC_inc <= '0';
+			I_rd <= '0';IR_id <= '0';
+			D_addr <= "00000000"; D_rd <= '0'; D_wr <= '0';
+			RF_Rp_addr <= "0000";   
+			 RF_W_data <= "00000000";  
+			 
+			
 			when constante => RF_s1 <= '1';
 				RF_s0 <= '0';
 				RF_W_addr <= ra;
 				RF_W_data <= c;
 				RF_W_wr <= '1';
+				
+				PC_clr <= '0'; PC_id <= '0'; PC_inc <= '0';
+			I_rd <= '0';IR_id <= '0';
+			D_addr <= "00000000"; D_rd <= '0'; D_wr <= '0';
+			RF_Rp_addr <= "0000"; RF_Rp_rd <= '0'; RF_Rq_addr <= "0000"; RF_Rq_rd <= '0';
+			 alu_s0 <= '0'; alu_s1 <= '0';
+			
 			when subtrair => RF_Rp_addr <= rb;
-				RF_Rq_addr <= rb;
 				RF_Rp_rd <= '1';
 				RF_s1 <= '0';
 				RF_s0 <= '0';
@@ -132,12 +178,46 @@ process (clk) begin -- registrador de estados que promove a mudança de estado s
 				RF_W_wr <='1';
 				alu_s0 <= '0';
 				alu_s1 <= '1';
+				
+				PC_clr <= '0'; PC_id <= '0'; PC_inc <= '0';
+			I_rd <= '0';IR_id <= '0';
+			D_addr <= "00000000"; D_rd <= '0'; D_wr <= '0';
+			 
+			 RF_W_data <= "00000000"; 
+			
 			when saltar_se => 
 			    RF_Rp_addr <= ra;
 				RF_Rp_rd <= '1';
+				
+				PC_clr <= '0'; PC_id <= '0'; PC_inc <= '0';
+			I_rd <= '0';IR_id <= '0';
+			D_addr <= "00000000"; D_rd <= '0'; D_wr <= '0';
+			 RF_Rq_addr <= "0000"; RF_Rq_rd <= '0';
+			RF_W_addr <= "0000"; RF_W_data <= "00000000"; RF_W_wr <= '0'; RF_s0 <= '0';
+			RF_s1 <= '0'; alu_s0 <= '0'; alu_s1 <= '0';
+			
+			when verifica => 
+			    RF_Rp_addr <= ra;
+				RF_Rp_rd <= '1';
+				
+				PC_clr <= '0'; PC_id <= '0'; PC_inc <= '0';
+			I_rd <= '0';IR_id <= '0';
+			D_addr <= "00000000"; D_rd <= '0'; D_wr <= '0';
+			 RF_Rq_addr <= "0000"; RF_Rq_rd <= '0';
+			RF_W_addr <= "0000"; RF_W_data <= "00000000"; RF_W_wr <= '0'; RF_s0 <= '0';
+			RF_s1 <= '0'; alu_s0 <= '0'; alu_s1 <= '0';
 			when saltar => 
 			    PC_id <= '1';
+				
+				PC_clr <= '0'; PC_inc <= '0';
+			I_rd <= '0';IR_id <= '0';
+			D_addr <= "00000000"; D_rd <= '0'; D_wr <= '0';
+			RF_Rp_addr <= "0000"; RF_Rp_rd <= '0'; RF_Rq_addr <= "0000"; RF_Rq_rd <= '0';
+			RF_W_addr <= "0000"; RF_W_data <= "00000000"; RF_W_wr <= '0'; RF_s0 <= '0';
+			RF_s1 <= '0'; alu_s0 <= '0'; alu_s1 <= '0';
+			
 			when others => null;
 end case;
 end process;
 end;
+
