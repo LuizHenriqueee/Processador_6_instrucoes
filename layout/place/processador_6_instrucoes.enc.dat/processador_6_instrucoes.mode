@@ -1,0 +1,18 @@
+catch { setAnalysisMode -analysisType single }
+catch { setAnalysisMode -checkType setup }
+catch { setAnalysisMode -clkSrcPath true }
+catch { setAnalysisMode -clockPropagation forcedIdeal }
+catch { setAnalysisMode -virtualIPO false }
+setExtractRCMode  -engine preRoute
+catch { setPlaceMode -doCongOpt false }
+catch { setPlaceMode -modulePlan true }
+catch { setPlaceMode -place_design_floorplan_mode false }
+catch { setPlaceMode -place_global_ignore_scan false }
+catch { setPlaceMode -timingDriven true }
+catch { setScanReorderMode -skipMode skipBuffer }
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepFlatten true }
+catch { setDelayCalMode -enable_high_fanout true }
+catch { setDelayCalMode -eng_copyNetPropToNewNet true }
+catch { setDelayCalMode -engine aae }
+catch { setDelayCalMode -ignoreNetLoad false }
+catch { setSIMode -separate_delta_delay_on_data true }

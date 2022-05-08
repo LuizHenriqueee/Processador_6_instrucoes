@@ -1,0 +1,49 @@
+catch { setAnalysisMode -analysisType bcwc }
+catch { setAnalysisMode -checkType setup }
+catch { setAnalysisMode -clkSrcPath true }
+catch { setAnalysisMode -clockPropagation sdcControl }
+catch { setAnalysisMode -skew true }
+catch { setAnalysisMode -virtualIPO false }
+catch { setOptMode -activeHoldViews { typical } }
+catch { setOptMode -activeSetupViews { typical } }
+catch { setOptMode -autoHoldViews { typical } }
+catch { setOptMode -autoSetupViews { typical} }
+catch { setOptMode -autoTDGRSetupViews { typical} }
+catch { setOptMode -drcMargin 0 }
+catch { setOptMode -effort high }
+catch { setOptMode -holdTargetSlack 0 }
+catch { setOptMode -maxDensity 0.95 }
+catch { setOptMode -preserveAllSequential false }
+catch { setOptMode -setupTargetSlack 0 }
+catch { setOptMode -simplifyNetlist false }
+catch { setOptMode -usefulSkew false }
+setExtractRCMode  -engine postRoute -coupled false -minNetTermNrToBeInMem 50
+catch {setNanoRouteMode -quiet -drouteAntennaFactor 1.000000}
+catch {setNanoRouteMode -quiet -droutePostRouteSpreadWire "auto"}
+catch {setNanoRouteMode -quiet -drouteStartIteration 0}
+catch {setNanoRouteMode -quiet -drouteUseMultiCutViaEffort "<default>"}
+catch {setNanoRouteMode -quiet -extractThirdPartyCompatible false}
+catch {setNanoRouteMode -quiet -grouteExpTdStdDelay 31.500000}
+catch {setNanoRouteMode -quiet -routeTdrEffort 6}
+catch {setNanoRouteMode -quiet -routeTdrPreferLayerPercentage 0.000000}
+catch {setNanoRouteMode -quiet -routeWithTimingDriven true}
+
+catch { setPlaceMode -doCongOpt false }
+catch { setPlaceMode -modulePlan true }
+catch { setPlaceMode -place_design_floorplan_mode false }
+catch { setPlaceMode -place_global_ignore_scan false }
+catch { setPlaceMode -timingDriven true }
+catch { setScanReorderMode -skipMode skipBuffer }
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepFlatten true }
+catch { setUsefulSkewMode -ecoRoute false }
+catch { setDelayCalMode -enable_high_fanout true }
+catch { setDelayCalMode -eng_copyNetPropToNewNet true }
+catch { setDelayCalMode -engine aae }
+catch { setDelayCalMode -ignoreNetLoad false }
+catch { setDelayCalMode -SIAware false }
+catch { setTrialRouteModePrv -handlePreroute true }
+catch { setTrialRouteModePrv -keepMarkedOptRoutes true }
+catch { setHierMode -disableArt false }
+catch { setHierMode -reportPostRouteArtTiming false }
+catch { setHierMode -trialRouteHonorReadOnly false }
+catch { setSIMode -separate_delta_delay_on_data true }

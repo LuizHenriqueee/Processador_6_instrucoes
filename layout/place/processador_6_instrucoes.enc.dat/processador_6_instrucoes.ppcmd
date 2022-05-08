@@ -1,0 +1,62 @@
+# PPCMD 1 
+# sroute -nets { VDD VSS } -straightConnections { straightWithDrcClean straightWithChanges }
+# 3 
+# 16 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 1 
+
+# PPCMD 2 
+# addStripe -nets {VSS VDD} -layer METAL2 -width 3 -spacing 2 -number_of_sets 1 -start_offset 155
+# 2 
+# 2 
+# 1 
+# 0 
+# 0 
+# 2 
+# BOX_LIST 
+# 2080 2080 762480 392880 0 
+# 12080 12080 752480 382880 0 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# VDD 6000 2 0 340160 753400 0 0 0 
+# VSS 6000 2 0 330160 753400 0 0 0 
+# END_NET_INFO_LIST 
+# END_PPCMD 2 
+
+# PPCMD 3 
+# addRing -type core_rings -nets {VDD VSS} -width_left 3 -width_bottom 3 -width_top 3 -width_right 3 -spacing_bottom 2 -spacing_top 2 -spacing_right 2 -spacing_left 2 -layer_bottom METAL1 -layer_right METAL2 -layer_left METAL2 -layer_top METAL1 -center 1
+# 1 
+# 32 
+# 1 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# VSS 6000 1 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 385280 5080 385280 395880 
+# END_RING_PT_INFO_LIST 
+# VSS 6000 2 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 5080 200480 765480 200480 
+# END_RING_PT_INFO_LIST 
+# VDD 6000 1 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 385280 15080 385280 385880 
+# END_RING_PT_INFO_LIST 
+# VDD 6000 2 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 15080 200480 755480 200480 
+# END_RING_PT_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 3 
+

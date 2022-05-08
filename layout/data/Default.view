@@ -1,0 +1,15 @@
+# Version:1.0 MMMC View Definition File
+# Do Not Remove Above Line
+
+create_rc_corner -name typical_rc -cap_table {/opt/cadence/tsmc_018_6M20K/tcb018gbwp7t_270a_FE/tcb018gbwp7t_270a_sef/TSMCHOME/digital/Back_End/lef/tcb018gbwp7t_270a/techfiles/captable/t018lo_1p6m_typical.captable} -preRoute_res {1.0} -preRoute_cap {1.0} -preRoute_clkres {0.0} -preRoute_clkcap {0.0} -postRoute_res {1.0} -postRoute_cap {1.0} -postRoute_xcap {1.0} -postRoute_clkres {0.0} -postRoute_clkcap {0.0}
+
+create_library_set -name typical_lib -timing {/opt/cadence/tsmc_018_6M20K/tcb018gbwp7t_270a_FE/tcb018gbwp7t_270a_nldm/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcb018gbwp7t_270a/tcb018gbwp7ttc.lib}
+
+create_constraint_mode -name typical_constraint -sdc_files {SDC/processador_6_instrucoes_out_sdc.sdc}
+
+create_delay_corner -name typical_dly -library_set {typical_lib} -rc_corner {typical_rc}
+
+create_analysis_view -name typical -constraint_mode {typical_constraint} -delay_corner {typical_dly}
+
+set_analysis_view -setup {typical} -hold {typical}
+

@@ -1,0 +1,32 @@
+catch { setAnalysisMode -analysisType single }
+catch { setAnalysisMode -checkType setup }
+catch { setAnalysisMode -clkSrcPath true }
+catch { setAnalysisMode -clockPropagation sdcControl }
+catch { setAnalysisMode -virtualIPO false }
+catch { setOptMode -activeHoldViews { typical } }
+catch { setOptMode -activeSetupViews { typical } }
+catch { setOptMode -autoHoldViews { typical } }
+catch { setOptMode -autoSetupViews { typical} }
+catch { setOptMode -autoTDGRSetupViews { typical} }
+catch { setOptMode -drcMargin 0 }
+catch { setOptMode -effort high }
+catch { setOptMode -preserveAllSequential false }
+catch { setOptMode -setupTargetSlack 0 }
+setExtractRCMode  -engine preRoute
+catch {setNanoRouteMode -quiet -grouteExpTdStdDelay 31.500000}
+
+catch { setPlaceMode -doCongOpt false }
+catch { setPlaceMode -modulePlan true }
+catch { setPlaceMode -place_design_floorplan_mode false }
+catch { setPlaceMode -place_global_ignore_scan false }
+catch { setPlaceMode -timingDriven true }
+catch { setScanReorderMode -skipMode skipBuffer }
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepFlatten true }
+catch { setUsefulSkewMode -ecoRoute false }
+catch { setDelayCalMode -enable_high_fanout true }
+catch { setDelayCalMode -eng_copyNetPropToNewNet true }
+catch { setDelayCalMode -engine aae }
+catch { setDelayCalMode -ignoreNetLoad false }
+catch { setTrialRouteModePrv -handlePreroute true }
+catch { setTrialRouteModePrv -keepMarkedOptRoutes true }
+catch { setSIMode -separate_delta_delay_on_data true }
