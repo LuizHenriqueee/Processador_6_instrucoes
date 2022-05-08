@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a12ticsg325-1L" LaunchTime="1651582997">
+  <File Type="PA-TCL" Name="tb_processador_6_instrucoes.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="tb_processador_6_instrucoes_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="tb_processador_6_instrucoes_reports.tcl"/>
+  <File Type="RDS-RDS" Name="tb_processador_6_instrucoes.vds"/>
+  <File Type="RDS-UTIL" Name="tb_processador_6_instrucoes_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="tb_processador_6_instrucoes_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="tb_processador_6_instrucoes.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="tb_processador_6_instrucoes_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="tb_processador_6_instrucoes_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/ALU.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../PC2/synth_files/rtl/ALU.vhd"/>
+        <Attr Name="ImportTime" Val="1650105120"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/InstructionRegister.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../PC2/synth_files/rtl/InstructionRegister.vhd"/>
+        <Attr Name="ImportTime" Val="1650105120"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/MUX3x1.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../PC2/synth_files/rtl/MUX3x1.vhd"/>
+        <Attr Name="ImportTime" Val="1650105120"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/RegisterFile.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../PC2/synth_files/rtl/RegisterFile.vhd"/>
+        <Attr Name="ImportTime" Val="1650105120"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/bloco_controle.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../PC2/synth_files/rtl/bloco_controle.vhd"/>
+        <Attr Name="ImportTime" Val="1650105120"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/bloco_operacional.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../PC2/synth_files/rtl/bloco_operacional.vhd"/>
+        <Attr Name="ImportTime" Val="1650105120"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/flag0.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../PC2/synth_files/rtl/flag0.vhd"/>
+        <Attr Name="ImportTime" Val="1650105120"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/memD.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../PC2/synth_files/rtl/memD.vhd"/>
+        <Attr Name="ImportTime" Val="1650105120"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/memI.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../PC2/synth_files/rtl/memI.vhd"/>
+        <Attr Name="ImportTime" Val="1650105120"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/pc.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../PC2/synth_files/rtl/pc.vhd"/>
+        <Attr Name="ImportTime" Val="1650105120"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/processador_6_instrucoes.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../PC2/synth_files/rtl/processador_6_instrucoes.vhd"/>
+        <Attr Name="ImportTime" Val="1650108265"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/somador.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../PC2/synth_files/rtl/somador.vhd"/>
+        <Attr Name="ImportTime" Val="1650105120"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/unidade_de_controle.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../PC2/synth_files/rtl/unidade_de_controle.vhd"/>
+        <Attr Name="ImportTime" Val="1650116850"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/tb_processador_6_instrucoes.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../PC2/synth_files/rtl/tb_processador_6_instrucoes.vhd"/>
+        <Attr Name="ImportTime" Val="1650105120"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Processador_6_instrucoes/blocoControle+memI/hexFile.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../blocoControle+memI/hexFile.mem"/>
+        <Attr Name="ImportTime" Val="1650105120"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="tb_processador_6_instrucoes"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

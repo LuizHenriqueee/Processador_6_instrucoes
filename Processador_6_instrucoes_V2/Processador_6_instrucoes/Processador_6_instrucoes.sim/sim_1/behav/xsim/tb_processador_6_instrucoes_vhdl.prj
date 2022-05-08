@@ -1,0 +1,19 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/ALU.vhd" \
+"../../../../Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/InstructionRegister.vhd" \
+"../../../../Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/MUX3x1.vhd" \
+"../../../../Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/RegisterFile.vhd" \
+"../../../../Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/bloco_controle.vhd" \
+"../../../../Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/bloco_operacional.vhd" \
+"../../../../Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/flag0.vhd" \
+"../../../../Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/memD.vhd" \
+"../../../../Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/memI.vhd" \
+"../../../../Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/pc.vhd" \
+"../../../../Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/processador_6_instrucoes.vhd" \
+"../../../../Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/somador.vhd" \
+"../../../../Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/unidade_de_controle.vhd" \
+"../../../../Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/tb_processador_6_instrucoes.vhd" \
+
+# Do not sort compile order
+nosort

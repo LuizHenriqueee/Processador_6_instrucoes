@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_processador_6_instrucoes_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_processador_6_instrucoes" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="20.601 ns"></ZoomEndTime>
+      <Cursor1Time time="12.500 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="160"></NameColumnWidth>
+      <ValueColumnWidth column_width="109"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/tb_processador_6_instrucoes/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/data" type="array">
+      <obj_property name="ElementShortName">data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/PC" type="array">
+      <obj_property name="ElementShortName">PC[15:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/I_rd" type="logic">
+      <obj_property name="ElementShortName">I_rd</obj_property>
+      <obj_property name="ObjectShortName">I_rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/period" type="other">
+      <obj_property name="ElementShortName">period</obj_property>
+      <obj_property name="ObjectShortName">period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/processador/bloco_controle/U0/state" type="other">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/processador/bloco_controle/U0/nextstate" type="other">
+      <obj_property name="ElementShortName">nextstate</obj_property>
+      <obj_property name="ObjectShortName">nextstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/processador/bloco_controle/U0/RF_Rp_zero" type="logic">
+      <obj_property name="ElementShortName">RF_Rp_zero</obj_property>
+      <obj_property name="ObjectShortName">RF_Rp_zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/processador/bloco_controle/U0/op" type="array">
+      <obj_property name="ElementShortName">op[3:0]</obj_property>
+      <obj_property name="ObjectShortName">op[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/processador/bloco_controle/U1/PC_Id" type="logic">
+      <obj_property name="ElementShortName">PC_Id</obj_property>
+      <obj_property name="ObjectShortName">PC_Id</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/processador/bloco_controle/U2/data_out" type="array">
+      <obj_property name="ElementShortName">data_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/processador/bloco_controle/U3/sum" type="array">
+      <obj_property name="ElementShortName">sum[15:0]</obj_property>
+      <obj_property name="ObjectShortName">sum[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/processador/bloco_controle/U1/PC_in" type="array">
+      <obj_property name="ElementShortName">PC_in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_in[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/processador/bloco_controle/U1/PC_inc" type="logic">
+      <obj_property name="ElementShortName">PC_inc</obj_property>
+      <obj_property name="ObjectShortName">PC_inc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/processador/bloco_controle/U3/s" type="array">
+      <obj_property name="ElementShortName">s[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/processador/bloco_controle/U2/data_out" type="array">
+      <obj_property name="ElementShortName">data_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/processador/bloco_controle/s_IR" type="array">
+      <obj_property name="ElementShortName">s_IR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s_IR[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/processador/bloco_controle/U3/a" type="array">
+      <obj_property name="ElementShortName">a[15:0]</obj_property>
+      <obj_property name="ObjectShortName">a[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_processador_6_instrucoes/processador/bloco_controle/U3/b" type="array">
+      <obj_property name="ElementShortName">b[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b[7:0]</obj_property>
+   </wvobject>
+</wave_config>

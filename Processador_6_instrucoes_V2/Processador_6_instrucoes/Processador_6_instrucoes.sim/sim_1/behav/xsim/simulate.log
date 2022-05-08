@@ -1,0 +1,9 @@
+Time resolution is 1 ps
+Warning: TEXTIO function READ: line is empty
+Time: 0 ps  Iteration: 0  Process: /tb_processador_6_instrucoes/memoria_I/mem_init  File: C:/Users/User/Documents/GitHub/Processador_6_instrucoes/Processador_6_instrucoes_V2/Processador_6_instrucoes/Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/memI.vhd
+Warning: TEXTIO function READ: line is empty
+Time: 0 ps  Iteration: 0  Process: /tb_processador_6_instrucoes/memoria_I/mem_init  File: C:/Users/User/Documents/GitHub/Processador_6_instrucoes/Processador_6_instrucoes_V2/Processador_6_instrucoes/Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/memI.vhd
+Warning: TEXTIO function READ: line is empty
+Time: 0 ps  Iteration: 0  Process: /tb_processador_6_instrucoes/memoria_I/mem_init  File: C:/Users/User/Documents/GitHub/Processador_6_instrucoes/Processador_6_instrucoes_V2/Processador_6_instrucoes/Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/memI.vhd
+Note: variavel RF_Rp_zero = 1 
+Time: 107500 ps  Iteration: 6  Process: /tb_processador_6_instrucoes/processador/bloco_controle/U0/line__48  File: C:/Users/User/Documents/GitHub/Processador_6_instrucoes/Processador_6_instrucoes_V2/Processador_6_instrucoes/Processador_6_instrucoes.srcs/sources_1/imports/Processador_6_instrucoes/PC2/synth_files/rtl/bloco_controle.vhd
