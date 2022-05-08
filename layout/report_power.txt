@@ -1,0 +1,184 @@
+
+Power Net Detected:
+    Voltage	    Name
+    0.00V	    VSS
+    1.80V	    VDD
+Load RC corner of view typical
+
+Begin Power Analysis
+
+    0.00V	    VSS
+    1.80V	    VDD
+
+Begin Processing Timing Library for Power Calculation
+
+Begin Processing Timing Library for Power Calculation
+
+
+
+Begin Processing Power Net/Grid for Power Calculation
+
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=1003.42MB/1003.42MB)
+
+Begin Processing Timing Window Data for Power Calculation
+
+clk(100MHz) CK: assigning clock clk to net clk
+Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total)=1003.55MB/1003.55MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=1003.61MB/1003.61MB)
+
+Begin Processing Signal Activity
+
+
+Starting Levelizing
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT)
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 10%
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 20%
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 30%
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 40%
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 50%
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 60%
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 70%
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 80%
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 90%
+
+Finished Levelizing
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT)
+
+Starting Activity Propagation
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT)
+** INFO:  (VOLTUS_POWR-1356): No default input activity has been set. Defaulting to 0.2.
+Use 'set_default_switching_activity -input_activity' command to change the default activity value.
+
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 10%
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 20%
+
+Finished Activity Propagation
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT)
+Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total)=1003.85MB/1003.85MB)
+
+Begin Power Computation
+
+      ----------------------------------------------------------
+      # of cell(s) missing both power/leakage table: 0
+      # of cell(s) missing power table: 0
+      # of cell(s) missing leakage table: 0
+      # of MSMV cell(s) missing power_level: 0
+      ----------------------------------------------------------
+
+
+
+Starting Calculating power
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT)
+ ... Calculating switching power
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 10%
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 20%
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 30%
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 40%
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 50%
+ ... Calculating internal and leakage power
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 60%
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 70%
+2022-May-08 18:11:30 (2022-May-08 21:11:30 GMT): 80%
+2022-May-08 18:11:31 (2022-May-08 21:11:31 GMT): 90%
+
+Finished Calculating power
+2022-May-08 18:11:31 (2022-May-08 21:11:31 GMT)
+Ended Power Computation: (cpu=0:00:00, real=0:00:00, mem(process/total)=1004.20MB/1004.20MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total)=1004.24MB/1004.24MB)
+
+Ended Power Analysis: (cpu=0:00:00, real=0:00:01, mem(process/total)=1004.24MB/1004.24MB)
+
+Begin Static Power Report Generation
+*----------------------------------------------------------------------------------------
+*	Innovus 17.10-p006_1 (64bit) 05/31/2017 11:06 (Linux 2.6.18-194.el5)
+*	
+*
+* 	Date & Time:	2022-May-08 18:11:31 (2022-May-08 21:11:31 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: processador_6_instrucoes
+*
+*	Liberty Libraries used:
+*	        typical: /opt/cadence/tsmc_018_6M20K/tcb018gbwp7t_270a_FE/tcb018gbwp7t_270a_nldm/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcb018gbwp7t_270a/tcb018gbwp7ttc.lib
+*
+*	Power Domain used:
+*		Rail:        VDD 	Voltage:        1.8
+*
+*       Power View : typical
+*
+*       User-Defined Activity : N.A.
+*
+*       Activity File: N.A.
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: 0.200000
+*
+*       Primary Input Activity: 0.200000
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs
+*
+*       report_power
+*
+-----------------------------------------------------------------------------------------
+
+
+Total Power
+-----------------------------------------------------------------------------------------
+Total Internal Power:       11.20275198 	   90.1847%
+Total Switching Power:       1.21908189 	    9.8139%
+Total Leakage Power:         0.00017811 	    0.0014%
+Total Power:                12.42201209
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                         10.46      0.3342   0.0001335        10.8       86.94
+Macro                                  0           0           0           0           0
+IO                                     0           0           0           0           0
+Combinational                     0.7379      0.8849    4.46e-05       1.623       13.06
+Clock (Combinational)                  0           0           0           0           0
+Clock (Sequential)                     0           0           0           0           0
+-----------------------------------------------------------------------------------------
+Total                               11.2       1.219   0.0001781       12.42         100
+-----------------------------------------------------------------------------------------
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+VDD                       1.8       11.2       1.219   0.0001781       12.42         100
+ 
+ 
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+* 		Highest Average Power: bloco_controle_U0_IR_id_reg (LHQD2BWP7T): 	   0.01697
+* 		Highest Leakage Power: my_bloco_operacional_myalu_sub_21_39_Y_myalu_add_20_39_g1360__2006 (FA1D0BWP7T): 	 2.242e-07
+* 		Total Cap: 	4.13133e-11 F
+* 		Total instances in design:  1780
+* 		Total instances in design with no power:     0
+*                Total instances in design with no activty:     0
+
+* 		Total Fillers and Decap:     0
+-----------------------------------------------------------------------------------------
+ 
+Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:00,
+mem(process/total)=1004.46MB/1004.46MB)
+
